@@ -15,9 +15,11 @@ pipeline {
             }
         }
 
-        steps {
-                // Navigate to webApp1, clean, and package
-                bat 'cd webApp1 && mvn package'
+        stage('Clean and Package webApp1') {
+            steps {
+                bat 'cd webApp1 && mvn clean package'
             }
+        }
+
 }
 }
