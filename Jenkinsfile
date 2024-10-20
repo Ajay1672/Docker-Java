@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps{
-              echo "welcome"
+              git branch: 'master', credentialsId: 'a', url: 'git@github.com:Ajay1672/Docker-Java.git'
             }
         }
 }
